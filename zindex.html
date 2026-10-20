@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+
+    <title>Placar</title>
+    <style>
+        body{ font-family: sans-serif; font-weight: 400; text-align: center; margin-top: 50px;}
+        h1 {font-size: 60px; margin: 10px 0;}
+        button { padding: 10px 20px; font-size: 16px; cursor:pointer}
+    </style>
+</head>
+<body>
+    
+    <h2> Vitoria do time </h2>
+    <h1 id="total">0</h1>
+    <button id="btn"> +1 Vitória </button>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const supabase_url = 'https://lzhahdimmrubudtuvugl.supabase.co';
+        const supabase_key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx6aGFoZGltbXJ1YnVkdHV2dWdsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIzODc0OTksImV4cCI6MjEwNzk2MzQ5OX0.Doy47HGV94XcIu9v-';
+        const supabase = window.supabase.createClient(supabase_url, supabase_key);
+
+
+        const totaLEL = document.getElementById('total');
+        let qtd = 0;
+
+        supabase.from('placar').select('vitorias').eq('id', 1).single().then(({ data }) => {
+            if (data) {
+                qtd = data.vitorias;
+                totaLEL.textContent = qtd;
+            }
+    })
+    </script>
+</body>
+</html>
