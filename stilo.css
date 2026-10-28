@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: #d3a26d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 8px;
+    color:#222222;
+}
+
+/* Aplica o estilo de cartão ao login e ao cadastro */
+.card, .caixa-login {
+    background: #f2e7d1;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #222222; /* Corrigido de #2222 para ser visível */
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-size: 13px;
+    color: #222222;
+    display: block;
+    margin-top: 8px;
+}
+
+input, select {
+    padding: 9px 10px;
+    border: 1px solid #f6efe0;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+    border-color: #555;
+}
+
+.workselect, .data{
+    color: #555;
+}
+input:focus, select:focus {
+    border-color: #007fbf;
+}
+
+/* Botão principal (Entrar / Salvar cadastro) */
+.btn-princ {
+    background-color: #007fbf;
+    color: aliceblue;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.btn-princ:hover {
+    background-color: #0056b3;
+}
+
+/* Botão secundário (Links e atalhos) */
+.btn-sec {
+    background: none;
+    border: 1px solid #007fbf;
+    color: #007fbf;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.btn-sec:hover {
+    background-color: aliceblue;
+}
+
+/* Caixa de mensagens de feedback */
+.mensagem {
+    font-size: 13px;
+    text-align: center;
+    min-height: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.mensagem.erro {
+    color: #d9534f;
+}
+
+.mensagem.sucesso {
+    color: #28a745;
+}

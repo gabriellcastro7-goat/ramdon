@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cadastro - Controlivros </title>
+    <link rel="stylesheet" href="stilo.css">
+</head>
+<body>
+    
+    <div class="card">
+        <h2> Crie sua conta </h2>
+
+        <form id="formCadastro">
+            <div class="form-group">
+                <label for="email"> Email: </label>
+                <input type="email" id="email" placeholder="Ex: seuemail@livraria.br" required>
+            </div>
+
+            <div class="form-group">
+                <label for="senhaCad"> Senha: </label>
+                <input type="password" id="senhaCad" placeholder="Digite sua senha" minlength="8" maxlength="32" required>
+                <small class="dica-senha">
+                    *Sua senha deve ter entre 8 a 32 caracteres<br>
+                    *São permitidos caracteres especiais(@, !, &, etc)<br>
+                    *Espaços não são permitidos
+                </small>
+            </div>
+
+            <div class="form-group">
+                <label for="senhaConf"> Confirme a senha: </label>
+                <input type="password" id="senhaConf" placeholder="Confirme sua senha" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nome"> Nome completo: </label>
+                <input type="text" id="nome" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dataNasci"> Data de nascimento: </label>
+                <input type="date" id="dataNasci" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cpf"> CPF: </label>
+                <input type="text" id="cpf" placeholder="Digite seu CPF" required>
+            </div>
+
+            <div class="form-group">
+                <label for="workplace"> Selecione uma livraria parceira: </label>
+                <select id="workplace" required>
+                    <option value=""> Selecione uma opção </option>
+                    <option value="pr"> Livrarias Curitiba </option>
+                    <option value="sp"> Livraria da Vila </option>
+                    <option value="rj"> Livrarias Catarinense </option>
+                    <option value="mg"> Livrarias Leitura </option>
+                    <option value="sc"> Livrarias Saraiva </option> 
+                </select>
+            </div>
+
+            <button type="button" class="btn-princ" id="btnSave"> Salvar cadastro </button>
+            <a href="sistemaInt.html" class="btn-sec"> Voltar para o Login </a> 
+
+            <div class="mensagem" id="messgCadastro"></div>
+        </form>
+    </div>
+
+    <script src="cadastroInt.js"></script>
+</body>
+</html>
